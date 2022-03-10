@@ -10,8 +10,6 @@ class ResetController extends Controller
 {
     public function reset()
     {
-        Artisan::call('migrate:fresh --seed');
-
         foreach (['categories', 'products'] as $folder) {
             Storage::deleteDirectory($folder);
             Storage::makeDirectory($folder);
@@ -22,7 +20,6 @@ class ResetController extends Controller
                 Storage::put($file, Storage::disk('reset')->get($file));
             }
         }
-
         return redirect()->route('index');
     }
 }
