@@ -29,6 +29,10 @@ return [
     */
 
     'disks' => [
+        'reset' => [
+            'driver' => 'local',
+            'root' => base_path('resource/images'),
+        ],
 
         'local' => [
             'driver' => 'local',
