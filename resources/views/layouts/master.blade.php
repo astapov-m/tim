@@ -38,7 +38,6 @@
     </div>
     @auth <a class="btn btn-outline-success my-2 my-sm-0" href="{{route('login')}}">Админ панель</a> @endauth
 </nav>
-
 <div class="container mt-4">
     <div class="starter-template">
         <h1 align="center" style="color: #006400; font-family: franklin gothic medium">Полевая опытная станция</h1>
