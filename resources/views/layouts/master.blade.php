@@ -34,7 +34,6 @@
             <a class="nav-item nav-link border-bottom @routeactive('categories')" href="{{route('categories')}}">Наша продукция</a>
             <a class="nav-item nav-link border-bottom" href="{{route('index')}}#contact">Контакты</a>
             <a class="nav-item nav-link border-bottom" href="{{route('index')}}#we">О нас</a>
-            <a href="{{ route('reset') }}">ref</a>
         </div>
     </div>
     @auth <a class="btn btn-outline-success my-2 my-sm-0" href="{{route('login')}}">Админ панель</a> @endauth

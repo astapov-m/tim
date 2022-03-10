@@ -34,7 +34,6 @@ Route::group(['namespace' => 'App\Http\Controllers'],function (){
         Route::get('/helpCar/{parent_id}','HomeController@helpCar')->name('adminHelpCar');
         Route::get('/helpCarProduct/{parent_id}','HomeController@helpCarProduct')->name('adminHelpCarProduct');
     });
-    Route::get('reset', 'ResetController@reset')->name('reset');
     Route::get('/','MainController@index')->name('index');
     Route::get('/products','MainController@allProducts')->name('allProducts');
     Route::get('/','MainController@index')->name('index');
