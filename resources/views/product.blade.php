@@ -5,6 +5,12 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js"></script>
 @endsection
 @section('content')
+    <a href="{{route('categories')}}" style="float: left;color: black">Категории</a>
+    @foreach($product->category->getParents() as $category)
+        <p style="float: left"> >> {{$category->name}}</p>
+        @endforeach
+    <p style="float: left"> >> {{$product->category->name}}</p>
+    <br>
     <h3 align="center"><div class="product-about">
             @if(!$product->status)
                 <span class="price"><i class="fa fa-rub"></i>

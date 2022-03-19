@@ -35,7 +35,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav nmr" style="font-size: 25px; margin-left: 20%;margin-right: 20%">
             <a class="nav-item btn rounded-pill btn-success py-2 px-4 @routeactive('index')" href="{{route('index')}}">Главная</a>
-            <a class="nav-item btn rounded-pill btn-success  py-2 px-4 @routeactive('categories')" href="{{route('categories')}}">Наша продукция</a>
+            <a class="nav-item btn rounded-pill btn-success  py-2 px-4 @routeactive('categories') @routeactive('product')" href="{{route('categories')}}">Наша продукция</a>
             <a class="nav-item btn rounded-pill btn-success  py-2 px-4" href="{{route('index')}}#contact">Контакты</a>
             <a class="nav-item btn rounded-pill btn-success  py-2 px-4" href="{{route('index')}}#we">О нас</a>
         </div>

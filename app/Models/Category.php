@@ -18,4 +18,18 @@ class Category extends Model
     public function childrenCategories(){
         return $this->hasMany(Category::class)->with('categories');
     }
+    public function parent(){
+        return $this->belongsTo(Category::class,'category_id');
+    }
+    public function getParents(){
+        $parents = collect([]);
+
+        $parent = $this->parent;
+
+        while(!is_null($parent)){
+            $parents->push($parent);
+            $parent = $parent->parent;
+        }
+        return $parents->reverse();
+    }
 }
