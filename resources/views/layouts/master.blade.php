@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Интернет Магазин: Главная</title>
+    <title>Главная</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/nav.css" rel="stylesheet">
+    @yield('css')
     <script src="/js/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    @yield('css')
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <style>
@@ -22,28 +23,28 @@
         display: none;
     }
 </style>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light border">
+<body style="background-color: #f5fff2">
+<h1 align="center" style="color: #006400; font-family: franklin gothic medium">Полевая опытная станция</h1>
+<h2 align="center"><a style="color: black">РГАУ -
+        МСХА им. К.А. Тимирязева</a></h2>
+<nav class="navbar navbar-expand-lg navbar-light bg-light border header2 bg-success-gradiant" style="border-radius: 3px">
     <a class="navbar-brand" href="https://www.timacad.ru/"><img src="/images/img2.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav nmr" style="font-size: 25px">
-            <a class="nav-item nav-link  border-bottom @routeactive('index')" href="{{route('index')}}">Главная</a>
-            <a class="nav-item nav-link border-bottom @routeactive('categories')" href="{{route('categories')}}">Наша продукция</a>
-            <a class="nav-item nav-link border-bottom" href="{{route('index')}}#contact">Контакты</a>
-            <a class="nav-item nav-link border-bottom" href="{{route('index')}}#we">О нас</a>
+        <div class="navbar-nav nmr" style="font-size: 25px; margin-left: 20%;margin-right: 20%">
+            <a class="nav-item btn rounded-pill btn-success py-2 px-4 @routeactive('index')" href="{{route('index')}}">Главная</a>
+            <a class="nav-item btn rounded-pill btn-success  py-2 px-4 @routeactive('categories')" href="{{route('categories')}}">Наша продукция</a>
+            <a class="nav-item btn rounded-pill btn-success  py-2 px-4" href="{{route('index')}}#contact">Контакты</a>
+            <a class="nav-item btn rounded-pill btn-success  py-2 px-4" href="{{route('index')}}#we">О нас</a>
         </div>
     </div>
-    @auth <a class="btn btn-outline-success my-2 my-sm-0" href="{{route('login')}}">Админ панель</a> @endauth
+    @auth <a class="nav-item btn rounded-pill btn-dark  py-2 px-4" href="{{route('login')}}">Админ панель</a> @endauth
 </nav>
 
 <div class="container mt-4">
     <div class="starter-template">
-        <h1 align="center" style="color: #006400; font-family: franklin gothic medium">Полевая опытная станция</h1>
-        <h2 align="center"><a style="color: black">РГАУ -
-                МСХА им. К.А. Тимирязева</a></h2>
         <hr style="width: 100%; height: 1px; margin-top: 50px">
         @yield('content')
         <a id="back-to-top" href="#" class="btn btn-outline-success back-to-top" role="button"><i class="fas fa-chevron-up">^</i></a>

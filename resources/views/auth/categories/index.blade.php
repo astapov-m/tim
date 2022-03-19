@@ -41,6 +41,16 @@
                         </div>
                     </td>
                 </tr>
+                @foreach($categoty->childrenCategories as $childrenCategory)
+                    @include('auth.categories.layouts.children',compact('childrenCategory'))
+                @endforeach
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
             @endforeach
             </tbody>
         </table>

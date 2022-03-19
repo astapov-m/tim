@@ -1,9 +1,6 @@
 @extends('layouts.master')
 @section('css')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js"></script>
 @endsection
 @section('content')
 
@@ -41,15 +38,17 @@
     <h1 align="center">Новости</h1>
     @foreach($events as $event)
         @if($event->visible === 1)
+            <div style="background-color: rgba(146,204,128,0.5); border-radius: 5px;">
         <table class="table" id="{{$event->id}}">
             <tbody>
-            <tr>
+            <tr  class="border-dark">
                 <td>{{$event->created_at->format('m/d/Y')}}</td>
                 <td>{{$event->created_at->format('H:i:s')}}</td>
                 <td align="right"><a style="color: black"  href="javascript://" onclick="addRow('{{$event->id}}','{{$event->description}}');return false;">{{$event->name}}</a></td>
             </tr>
             </tbody>
         </table>
+            </div>
         @endif
         @auth
             @if($event->visible === 0)

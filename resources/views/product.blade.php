@@ -5,7 +5,13 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js"></script>
 @endsection
 @section('content')
-    <h1 align="center">{{$product->name}} </h1>
+    <h3 align="center"><div class="product-about">
+            @if(!$product->status)
+                <span class="price"><i class="fa fa-rub"></i>
+                Нет в наличии </span> @else
+                <span class="price" style="color: green"><i class="fa fa-rub"></i> В наличии </span> @endif
+            <p class="fa fa-rub">{{$product->price}} р/кг</p>
+        </div> </h3>
     <h6  align="center"><canvas id="my_canvas"></canvas></h6>
     <script>
         pdfjsLib.getDocument('{{Storage::url($product->cardPDF)}}').then(doc => {
@@ -13,7 +19,7 @@
                 var myCanvas = document.getElementById("my_canvas");
                 var context = myCanvas.getContext("2d");
 
-                var viewport = page.getViewport(1);
+                var viewport = page.getViewport(myCanvas.width / page.getViewport(0.4).width);
                 myCanvas.width = viewport.width;
                 myCanvas.height = viewport.height;
 

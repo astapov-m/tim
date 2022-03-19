@@ -24,7 +24,7 @@ class MainController extends Controller
         return view('product',compact('product'));
     }
     public function categories(){
-        $categories = Category::whereNull('parent_id')->get();
+        $categories = Category::whereNull('category_id')->get();
         return view('categories',compact('categories'));
     }
     public function category($code){
@@ -32,7 +32,7 @@ class MainController extends Controller
         return view('category',compact('category'));
     }
     public function categoriesCard($id){
-        $categories = Category::where('parent_id',$id)->get();
+        $categories = Category::where('category_id',$id)->get();
         if($categories->count()){
             return view('layouts.cardCategories',compact('categories'));
         }else{
