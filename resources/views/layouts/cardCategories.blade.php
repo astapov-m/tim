@@ -25,20 +25,4 @@
         @endforeach
     </div>
 @endisset
-<script>
-    $('.actions').on('click' ,function(e){
-            if($(this).find('a').attr('href') === '#'){
-                e.preventDefault();
-                var data = $(this).find('a').attr('id');
-                var name = $(this).find('a').attr('name');
-                console.log(data);
-                $("<a/>", {
-                    id: data,
-                    text: ">>"+name,
-                    style: "color:black",
-                }).appendTo("#tree");
-                $("#includedContent").load( "/cardCategories/"+data, function() {
-                });
-            }
-    });
-</script>
+

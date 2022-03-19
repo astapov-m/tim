@@ -9,11 +9,6 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
-    public function allProducts(){
-        $products = Product::get();
-        return view('allProducts',compact('products'));
-    }
-
     public function index(){
         $events = Event::get();
         return view('index',compact('events'));
@@ -27,22 +22,14 @@ class MainController extends Controller
         $categories = Category::whereNull('category_id')->get();
         return view('categories',compact('categories'));
     }
-    public function category($code){
-        $category = Category::where('code',$code)->first();
-        return view('category',compact('category'));
-    }
-    public function categoriesCard($id){
+    public function category($code,$id){
         $categories = Category::where('category_id',$id)->get();
+        $categoryList = Category::where('id',$id)->first();
         if($categories->count()){
-            return view('layouts.cardCategories',compact('categories'));
+            return view('category',compact('categories','categoryList'));
         }else{
             $cat = Category::where('id',$id)->first();
-            return view('layouts.cardCategories',compact('cat'));
+            return view('category',compact('cat','categoryList'));
         }
-
-    }
-    public function categoriesCardById($id){
-        $categories = Category::where('id',$id)->get();
-        return view('layouts.cardCategories',compact('categories'));
     }
 }

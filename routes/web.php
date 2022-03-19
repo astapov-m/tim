@@ -35,13 +35,9 @@ Route::group(['namespace' => 'App\Http\Controllers'],function (){
         Route::get('/helpCarProduct/{parent_id}','HomeController@helpCarProduct')->name('adminHelpCarProduct');
     });
     Route::get('/','MainController@index')->name('index');
-    Route::get('/products','MainController@allProducts')->name('allProducts');
-    Route::get('/','MainController@index')->name('index');
-    Route::get('/cardCategories/{id}','MainController@categoriesCard')->name('cardCategories');
-    Route::get('/categoriesCardById/{id}','MainController@categoriesCardById')->name('categoriesCardById');
     Route::get('/{category}/{product}','MainController@product')->name('product');
     Route::get('/categories','MainController@categories')->name('categories');
-    Route::get('/{category}','MainController@category')->name('category');
+    Route::get('/categories/{category}/{id}','MainController@category')->name('category');
 
     Route::get('/logout', 'Auth\LoginController@logout')->name('get-logout');
 });

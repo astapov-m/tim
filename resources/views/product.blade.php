@@ -7,9 +7,9 @@
 @section('content')
     <a href="{{route('categories')}}" style="float: left;color: black">Категории</a>
     @foreach($product->category->getParents() as $category)
-        <p style="float: left"> >> {{$category->name}}</p>
-        @endforeach
-    <p style="float: left"> >> {{$product->category->name}}</p>
+        <a href="{{route('category',[$category->code,$category->id])}}" style="float: left; color: black"> >> {{$category->name}}</a>
+    @endforeach
+    <a href="{{route('category',[$product->category->code,$product->category->id])}}" style="float: left;color: black"> >> {{$product->category->name}}</a>
     <br>
     <h3 align="center"><div class="product-about">
             @if(!$product->status)
