@@ -28,7 +28,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $categories = Category::get();
+        $categories = Category::where('category_id',null)->get();
         return view('auth.products.form',compact('categories'));
     }
 
@@ -80,7 +80,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        $categories = Category::get();
+        $categories = Category::where('category_id',null)->get();
         return view('auth.products.form',compact('product','categories'));
     }
 

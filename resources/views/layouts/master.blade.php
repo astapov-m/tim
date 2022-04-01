@@ -24,53 +24,60 @@
     }
 </style>
 <body style="background-color: #f5fff2">
-<h1 align="center" style="color: #006400; font-family: franklin gothic medium">Полевая опытная станция</h1>
-<h2 align="center"><a style="color: black">РГАУ -
-        МСХА им. К.А. Тимирязева</a></h2>
-<nav class="navbar navbar-expand-lg navbar-light bg-light border header2 bg-success-gradiant" style="border-radius: 3px">
-    <a class="navbar-brand" href="https://www.timacad.ru/"><img src="/images/img2.png"></a>
+<div class="header2 bg-success-gradiant"style="border-radius: 3px">
+    <div class="mt-1" style="text-align: center">
+        <div style="display: inline-block;vertical-align: top">
+            <a style="margin: 0" href="https://www.timacad.ru/"><img src="/images/img2.png"></a>
+        </div>
+        <div style="display: inline-block;vertical-align: top">
+            <h1  style="color: #006400; font-family: franklin gothic medium">Полевая опытная станция</h1>
+            <h2><a style="color: black">РГАУ -
+                    МСХА им. К.А. Тимирязева</a></h2>
+        </div>
+    </div>
+    <hr class="container" style="width: 100%; height: 3px; margin-top: 10px;margin-bottom: 10px ;color: black">
+<nav class="navbar navbar-expand-lg navbar-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav nmr" style="font-size: 25px; margin-left: 20%;margin-right: 20%">
+    <div class="collapse navbar-collapse w-100 justify-content-center mb-3" id="navbarNavAltMarkup">
+        <div class="navbar-nav nmr" style="font-size: 25px;">
             <a class="nav-item btn rounded-pill btn-success py-2 px-4 @routeactive('index')" href="{{route('index')}}">Главная</a>
-            <a class="nav-item btn rounded-pill btn-success  py-2 px-4 @routeactive('categories') @routeactive('product')" href="{{route('categories')}}">Наша продукция</a>
+            <a class="nav-item btn rounded-pill btn-success  py-2 px-4 @routeactive('categor*') @routeactive('product')" href="{{route('categories')}}">Наша продукция</a>
             <a class="nav-item btn rounded-pill btn-success  py-2 px-4" href="{{route('index')}}#contact">Контакты</a>
             <a class="nav-item btn rounded-pill btn-success  py-2 px-4" href="{{route('index')}}#we">О нас</a>
         </div>
     </div>
     @auth <a class="nav-item btn rounded-pill btn-dark  py-2 px-4" href="{{route('login')}}">Админ панель</a> @endauth
 </nav>
-
-<div class="container mt-4">
+</div>
+<div class="container mt-3">
     <div class="starter-template">
-        <hr style="width: 100%; height: 1px; margin-top: 50px">
+        <hr style="width: 100%; height: 1px;">
         @yield('content')
         <a id="back-to-top" href="#" class="btn btn-outline-success back-to-top" role="button"><i class="fas fa-chevron-up">^</i></a>
     </div>
-    <hr style="width: 100%; height: 1px; margin-top: 50px">
+    <hr style="width: 100%; height: 1px">
     <!-- Footer -->
     <footer class="text-center text-lg-start bg-light text-muted">
         <!-- Section: Social media -->
 
         <section class="">
-            <div class="container text-center text-md-start mt-5">
+            <div class="container text-center text-md-start">
                 <!-- Grid row -->
-                <div class="row mt-3"  align="center">
+                <div class="row"  align="center">
                     <!-- Grid column -->
 
                     <!-- Links -->
-                    <h6 id="contact" class="text-uppercase fw-bold mb-4">
+                    <h6 id="contact" class="text-uppercase fw-bold">
                     </h6>
-                    <p width="100%"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A553024ca97c21b4f891cc65aece93c56bae826cf1032edb3b6467e96b9749fbe&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe></p>
-                    <p><i class="fas fa-home me-3"></i> Тимирязевская ул., 49, Москва</p>
+                    <p width="100%"><iframe style="border-radius: 5px" src="https://yandex.ru/map-widget/v1/?um=constructor%3A03eeb54220602f07cc38803b8863624b1244a28113e0b5a7836271283c2127c4&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe></p>
+                    <p><i class="fas fa-home me-3"></i>Россия, Москва, улица Прянишникова, 37с9</p>
                     <p>
                         <i class="fas fa-envelope me-3"></i>
-                        tim@gmail.com
+                        pole-st@rgau-msha.ru
                     </p>
-                    <p><i class="fas fa-phone me-3"></i> 8 (800) 222-04-02</p>
-                    <p><i class="fas fa-print me-3"></i> 8 (800) 222-04-02</p>
+                    <p><i class="fas fa-phone me-3"></i> 8 (499) 976-11-82</p>
                 </div>
                 <!-- Grid column -->
 

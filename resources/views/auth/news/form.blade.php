@@ -9,9 +9,9 @@
 @section('content')
     <div class="col-md-12">
         @isset($event)
-            <h1>Редактировать категорию ( <b>{{$event->name}}</b>)</h1>
+            <h1>Редактировать новость ( <b>{{$event->name}}</b>)</h1>
         @else
-            <h1>Добавить Категорию</h1>
+            <h1>Добавить новость</h1>
         @endisset
 
         <form method="POST" enctype="multipart/form-data"
@@ -54,6 +54,15 @@
                     </div>
                     <br>
                 @endisset
+                <div class="input-group row">
+                    <label for="href" class="col-sm-2 col-form-label">Ссылка: </label>
+                    <div class="col-sm-6">
+
+                        <input type="text" class="form-control" name="href" id="href"
+                               value="@isset($event){{$event->href}}@endisset">
+                    </div>
+                </div>
+                <br>
             <button class="btn btn-success">Сохранить</button>
         </form>
     </div>

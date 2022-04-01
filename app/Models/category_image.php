@@ -5,8 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Event extends Model
+class category_image extends Model
 {
-    protected $fillable = ['name','description','visible','href'];
+    protected $fillable = ['code','name','description','image','visible'];
 
+    use HasFactory;
 }

@@ -15,7 +15,7 @@
             <span class="price"><i class="fa fa-rub"></i>
                 Нет в наличии </span> @else
                 <span class="price" style="color: green"><i class="fa fa-rub"></i> В наличии </span> @endif
-            <p class="fa fa-rub">{{$product->price}} р/кг</p>
+            <p class="fa fa-rub" style="font-size: 18px">{{$product->price}} р/кг</p>
         </div>
     </div></div>
 </div>
