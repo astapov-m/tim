@@ -57,6 +57,7 @@
         @yield('content')
         <a id="back-to-top" href="#" class="btn btn-outline-success back-to-top" role="button"><i class="fas fa-chevron-up">^</i></a>
     </div>
+
     <hr style="width: 100%; height: 1px">
     <!-- Footer -->
     <footer class="text-center text-lg-start bg-light text-muted">

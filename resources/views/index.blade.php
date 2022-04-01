@@ -13,19 +13,19 @@
             <div class="carousel-item active" style="height: 400px">
                 <img src="/images/p3.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <p class="nav-item btn rounded-pill py-2 px-4" style="background-color: black; color: white">Полевая опытная станция с высоты птичьего полета.</p>
+                    <p class="nav-item btn rounded-pill py-2 px-4" style="background-color: white; color: black">Полевая опытная станция с высоты птичьего полета.</p>
                 </div>
             </div>
             <div class="carousel-item" style="height: 400px">
                 <img src="/images/p2.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <p class="nav-item btn rounded-pill py-2 px-4" style="background-color: black; color: white">Цветение картофеля</p>
+                    <p class="nav-item btn rounded-pill py-2 px-4" style="background-color: white; color: black">Цветение картофеля</p>
                 </div>
             </div>
             <div class="carousel-item" style="height: 400px">
                 <img src="/images/p1.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <p class="nav-item btn rounded-pill py-2 px-4" style="background-color: black; color: white">Цветение рапса</p>
+                    <p class="nav-item btn rounded-pill py-2 px-4" style="background-color: white; color: black">Цветение рапса</p>
                 </div>
             </div>
         </div>
