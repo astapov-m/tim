@@ -52,7 +52,7 @@
                 <div class="input-group row">
                     <label for="category_id" class="col-sm-2 col-form-label">Категория: </label>
                     <div class="col-sm-6">
-                        <select name="category_id" id="category_id" class="form-control">
+                        <select @isset($product) disabled @endif name="category_id" id="category_id" class="form-control">
                             @foreach($categories as $category)
                                 <option value="{{$category->id}}"
                                         @isset($product)
@@ -176,6 +176,16 @@
         $("#test1").click(function () {
             x = 0;
             $("#includedContent").empty();
+            $('select[name="category_id"]').each(function () {
+                $(this).attr("id" , "category_id");
+            });
+            $("#category_id").prop('disabled',false);
+        });
+    </script>
+    <script>
+        $("#category_id").click(function () {
+            console.log(123);
+
         });
     </script>
 @endsection
