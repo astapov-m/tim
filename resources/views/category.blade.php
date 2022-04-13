@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('title', 'Наша продукция')
 @section('css')
     <link href="/css/card.css" rel="stylesheet">
 @endsection
