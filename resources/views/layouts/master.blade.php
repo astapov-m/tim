@@ -8,6 +8,7 @@
     <title>Полевая опытная станция РГАУ -
         МСХА : @yield('title')</title>
 
+    <link rel="shortcut icon" href="/images/img2.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/nav.css" rel="stylesheet">
@@ -28,7 +29,7 @@
 <div class="header2 bg-success-gradiant"style="border-radius: 3px">
     <div class="mt-1" style="text-align: center">
         <div style="display: inline-block;vertical-align: top">
-            <a style="margin: 0" href="https://www.timacad.ru/"><img src="/images/img2.png"></a>
+            <a style="margin: 0" href="https://www.timacad.ru/" target="_blank"><img src="/images/img2.png"></a>
         </div>
         <div style="display: inline-block;vertical-align: top">
             <h1  style="color: #006400; font-family: franklin gothic medium">Полевая опытная станция</h1>
@@ -43,10 +44,10 @@
     </button>
     <div class="collapse navbar-collapse w-100 justify-content-center mb-3" id="navbarNavAltMarkup">
         <div class="navbar-nav nmr" style="font-size: 25px;">
-            <a class="nav-item btn rounded-pill btn-success py-2 px-4 @routeactive('index')" href="{{route('index')}}">Главная</a>
-            <a class="nav-item btn rounded-pill btn-success  py-2 px-4 @routeactive('categor*') @routeactive('product')" href="{{route('categories')}}">Наша продукция</a>
-            <a class="nav-item btn rounded-pill btn-success  py-2 px-4" href="{{route('index')}}#contact">Контакты</a>
-            <a class="nav-item btn rounded-pill btn-success  py-2 px-4" href="{{route('index')}}#we">О нас</a>
+            <a class="nav-item btn rounded-pill btn-success py-2 px-4 mt-2 @routeactive('index')" href="{{route('index')}}">Главная</a>
+            <a class="nav-item btn rounded-pill btn-success  py-2 px-4 mt-2 @routeactive('categor*') @routeactive('product')" href="{{route('categories')}}">Наша продукция</a>
+            <a class="nav-item btn rounded-pill btn-success  py-2 px-4 mt-2" href="{{route('index')}}#contact">Контакты</a>
+            <a class="nav-item btn rounded-pill btn-success  py-2 px-4 mt-2" href="{{route('index')}}#we">О нас</a>
         </div>
     </div>
     @auth <a class="nav-item btn rounded-pill btn-dark  py-2 px-4" href="{{route('login')}}">Админ панель</a> @endauth
@@ -74,12 +75,12 @@
                     <h6 id="contact" class="text-uppercase fw-bold">
                     </h6>
                     <p width="100%"><iframe style="border-radius: 5px" src="https://yandex.ru/map-widget/v1/?um=constructor%3A03eeb54220602f07cc38803b8863624b1244a28113e0b5a7836271283c2127c4&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe></p>
-                    <p><i class="fas fa-home me-3"></i>Россия, Москва, улица Прянишникова, 37с9</p>
-                    <p>
+                    <a href="https://yandex.ru/maps/213/moscow/house/ulitsa_pryanishnikova_37s9/Z04YcwJmS0MFQFtvfXRydnpgYg==/?ll=37.556263%2C55.837636&z=16" target="_blank" style="color: #8ba054; margin-bottom: 1%"><i class="fas fa-home me-3"></i>Россия, Москва, улица Прянишникова, 37с9</a>
+                    <a style="color: #8ba054; margin-bottom: 1%" href="mailto:pole-st@rgau-msha.ru">
                         <i class="fas fa-envelope me-3"></i>
                         pole-st@rgau-msha.ru
-                    </p>
-                    <p><i class="fas fa-phone me-3"></i> 8 (499) 976-11-82</p>
+                    </a>
+                    <a href="tel:8 (499) 976-11-82" style="color: #8ba054; margin-bottom: 1%"><i class="fas fa-phone me-3"></i> 8 (499) 976-11-82</a>
                 </div>
                 <!-- Grid column -->
 

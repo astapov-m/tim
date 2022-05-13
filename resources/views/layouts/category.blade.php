@@ -2,7 +2,7 @@
     <div class="more">
     <div class="product">
         <div class="thumb-img">
-            <img src="{{Storage::url($category->image)}}">
+            <img loading="lazy" decoding="async" src="{{Storage::url($category->image)}}">
             <div class="actions">
                 <a id="{{$category->id}}" name="{{$category->name}}" href="{{route('category',[$category->code,$category->id])}}" class="add-to-cart">Подробнее</a>
             </div>

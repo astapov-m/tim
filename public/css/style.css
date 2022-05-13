@@ -1,3 +1,11 @@
 .nmr a{
     margin-left: 15px;
 }
+.vi p{
+    visibility: hidden;
+}
+.vi:hover p{
+    visibility: visible;
+    width: 100%;
+    display: flow;
+}
